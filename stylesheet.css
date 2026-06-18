@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  --color-bg: #fdf8f0;
+  --color-text: #2c2018;
+  --color-heading: #4a2c0a;
+  --color-accent: #7b3f00;
+  --color-rule-bg: #f5efe3;
+  --color-border: #c9a96e;
+  --color-note-bg: #fffbf0;
+  --color-note-border: #d4a017;
+  --color-critical-bg: #fff0f0;
+  --color-critical-border: #c0392b;
+  --color-table-header: #5c3317;
+  --color-nav-bg: #3d2008;
+  --color-nav-text: #f5e6c8;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text);
+  background: var(--color-bg);
+  margin: 0;
+  padding: 0;
+}
+
+/* ナビゲーション */
+nav.site-nav {
+  background: var(--color-nav-bg);
+  color: var(--color-nav-text);
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  font-size: 13px;
+}
+nav.site-nav a {
+  color: var(--color-nav-text);
+  text-decoration: none;
+  opacity: 0.85;
+}
+nav.site-nav a:hover { opacity: 1; text-decoration: underline; }
+nav.site-nav .nav-title {
+  font-weight: 700;
+  font-size: 15px;
+  margin-right: 12px;
+  opacity: 1;
+}
+nav.site-nav .nav-sep { opacity: 0.4; }
+
+/* ページ内目次 */
+.toc {
+  background: var(--color-rule-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 20px 28px;
+  margin: 32px auto;
+  max-width: 700px;
+}
+.toc h2 { margin-top: 0; font-size: 1.1em; color: var(--color-heading); }
+.toc ol { margin: 0; padding-left: 20px; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--color-accent); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+/* メインコンテンツ */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+/* 見出し */
+h1 {
+  font-size: 2em;
+  color: var(--color-heading);
+  border-bottom: 3px solid var(--color-border);
+  padding-bottom: 10px;
+  margin-top: 48px;
+}
+h2 {
+  font-size: 1.5em;
+  color: var(--color-heading);
+  border-left: 5px solid var(--color-accent);
+  padding-left: 12px;
+  margin-top: 40px;
+}
+h3 {
+  font-size: 1.2em;
+  color: var(--color-accent);
+  margin-top: 28px;
+}
+h4 {
+  font-size: 1.05em;
+  color: var(--color-accent);
+  margin-top: 20px;
+}
+
+/* 段落・リスト */
+p { margin: 10px 0 14px; }
+ul, ol { padding-left: 24px; margin: 10px 0; }
+li { margin: 5px 0; }
+
+/* ページ画像 */
+figure {
+  margin: 28px 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+figcaption {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* 手順番号付きステップ */
+.steps { list-style: none; padding: 0; }
+.steps > li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: var(--color-rule-bg);
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+.steps > li .step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1em;
+}
+.steps > li .step-body { flex: 1; }
+
+/* 注釈・重要ルール */
+.note {
+  background: var(--color-note-bg);
+  border-left: 4px solid var(--color-note-border);
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+.note strong { color: var(--color-accent); }
+
+.critical {
+  background: var(--color-critical-bg);
+  border-left: 4px solid var(--color-critical-border);
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+.critical strong { color: var(--color-critical-border); }
+
+.tip {
+  background: #f0f7f0;
+  border-left: 4px solid #5a9060;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+}
+.tip strong { color: #3a6040; }
+
+/* ファミリーボーナス */
+.family-bonus {
+  background: #f8f0ff;
+  border: 1px dashed #9b59b6;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 12px 0;
+  font-size: 0.95em;
+}
+.family-bonus strong { color: #6c3483; }
+
+/* テーブル */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95em;
+}
+th {
+  background: var(--color-table-header);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 700;
+}
+td {
+  padding: 8px 14px;
+  border: 1px solid #d4b896;
+}
+tr:nth-child(even) td { background: #fdf4e7; }
+
+/* コンポーネント一覧 */
+.components-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+.component-item {
+  background: var(--color-rule-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.95em;
+}
+.component-item .qty {
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-left: 6px;
+}
+
+/* VP配分グラフ代替 */
+.vp-dist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+.vp-item {
+  background: var(--color-rule-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 8px 14px;
+  text-align: center;
+  min-width: 120px;
+}
+.vp-item .pct { font-size: 1.3em; font-weight: 700; color: var(--color-accent); }
+
+/* セクション区切り */
+.section-divider {
+  border: none;
+  border-top: 2px dashed var(--color-border);
+  margin: 40px 0;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #888;
+  font-size: 0.85em;
+  border-top: 1px solid var(--color-border);
+  margin-top: 60px;
+}
+
+/* 印刷対応 */
+@media print {
+  nav.site-nav { display: none; }
+  body { font-size: 12px; background: #fff; }
+  figure img { max-width: 80%; }
+  h1, h2, h3 { page-break-after: avoid; }
+  .steps > li, .note, .critical { page-break-inside: avoid; }
+  a::after { content: none !important; }
+}
+
+@media (max-width: 600px) {
+  main { padding: 16px 12px 60px; }
+  h1 { font-size: 1.5em; }
+  h2 { font-size: 1.25em; }
+  .components-grid { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsession: Upstairs, Downstairs 拡張（日本語版）</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <style>
+    .servant-card {
+      display: flex;
+      gap: 16px;
+      background: var(--color-rule-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    .servant-card .icon {
+      font-size: 2em;
+      flex-shrink: 0;
+      width: 48px;
+      text-align: center;
+    }
+    .new-tag {
+      display: inline-block;
+      background: #c0392b;
+      color: #fff;
+      font-size: 0.75em;
+      font-weight: 700;
+      padding: 1px 7px;
+      border-radius: 10px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+    .ud-tag {
+      display: inline-block;
+      background: #2980b9;
+      color: #fff;
+      font-size: 0.75em;
+      font-weight: 700;
+      padding: 1px 7px;
+      border-radius: 10px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="nav-title">Obsession 日本語版</span>
+  <span class="nav-sep">|</span>
+  <a href="index.html">トップ</a>
+  <span class="nav-sep">·</span>
+  <a href="main_rulebook.html">基本ルール</a>
+  <span class="nav-sep">·</span>
+  <a href="wessex_expansion.html">Wessex拡張</a>
+  <span class="nav-sep">·</span>
+  <strong>U&amp;D拡張</strong>
+  <span class="nav-sep">·</span>
+  <a href="characters_expansion.html">Characters拡張</a>
+  <span class="nav-sep">·</span>
+  <a href="glossary.html">用語集</a>
+</nav>
+
+<main>
+
+<h1>Upstairs, Downstairs 拡張</h1>
+<p style="color:#888; font-size:0.9em;">原書: Upstairs, Downstairs Rulebook（Searchable – 2024）/ 16ページ</p>
+
+<div class="note">
+  <strong>前提:</strong> この拡張には Obsession 基本ゲームが必要です。基本ゲームになじんでから拡張を追加することを開発者は強く推奨しています。
+</div>
+
+<nav class="toc">
+  <h2>目次</h2>
+  <ol>
+    <li><a href="#components-ud">コンポーネント一覧</a></li>
+    <li><a href="#rule-changes">基本ゲームへのルール変更点</a></li>
+    <li><a href="#supplemental-service">新メカニズム：補助サービス</a></li>
+    <li><a href="#new-servants">新しい使用人</a></li>
+    <li><a href="#hiring-rule">雇用ルールとパス時の雇用</a></li>
+    <li><a href="#setup-ud">セットアップ（使用人ドラフト含む）</a></li>
+    <li><a href="#5-6-player">5〜6人プレイのルール</a></li>
+    <li><a href="#team-play">チームプレイ（競争・協力）</a></li>
+    <li><a href="#solo-estate">ソロ・エステートチャレンジ</a></li>
+    <li><a href="#tableau">タブロー・オブセッション</a></li>
+    <li><a href="#milestones">マイルストーン</a></li>
+    <li><a href="#new-tiles-ud">新しい改築タイル</a></li>
+  </ol>
+</nav>
+
+<figure>
+  <img src="images/upstairs_downstairs/page-01.png" alt="Upstairs Downstairs拡張 表紙と目次">
+  <figcaption>表紙（原書 p.1）</figcaption>
+</figure>
+
+<p>
+  <em>Upstairs, Downstairs</em> 拡張は、以下の要素を追加するメジャー拡張です:
+</p>
+<ul>
+  <li>5人・6人プレイへの対応</li>
+  <li>新しい使用人メカニズム（補助サービス）</li>
+  <li>新たなゲームモード（チームプレイ・ソロ・エステートチャレンジ・タブロー・オブセッション）</li>
+  <li>マイルストーン（公開目標）</li>
+  <li>新しい改築タイルと上流階級カード</li>
+</ul>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- コンポーネント                                                 -->
+<!-- ============================================================ -->
+<section id="components-ud">
+  <h1>コンポーネント一覧</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-02.png" alt="コンポーネント一覧（前半）。ボード、タイル、チット類">
+    <figcaption>コンポーネント（原書 p.2）</figcaption>
+  </figure>
+  <figure>
+    <img src="images/upstairs_downstairs/page-03.png" alt="コンポーネント一覧（後半）。使用人、カード、プロモカード類">
+    <figcaption>コンポーネント（続き）（原書 p.3）</figcaption>
+  </figure>
+
+  <h2>ボード・オーガナイザー</h2>
+  <div class="components-grid">
+    <div class="component-item">ハワード家プレイヤーボード（Howard Family Player Board）<span class="qty">×1</span></div>
+    <div class="component-item">邸宅オーガナイザー（Country Estate Organiser）<span class="qty">×1</span>（5人目用）</div>
+    <div class="component-item">タブロー用ラウンドトラック（Tableau Round Track）<span class="qty">×1</span></div>
+    <div class="component-item">スコアパッド（Scorepad）<span class="qty">×1</span></div>
+    <div class="component-item">スモールクロス収納バッグ（Small Cloth Storage Bag）<span class="qty">×1</span></div>
+  </div>
+
+  <div class="note">
+    <strong>ハワード家について:</strong> ハワード家プレイヤーボードを追加すると5人プレイが可能になります。ハワード家のファミリーボーナスはゲーム開始時に料理人（Cook）を1体持つことです。これは <em>Upstairs, Downstairs</em> 拡張専用です。
+  </div>
+
+  <h2>タイル</h2>
+  <div class="components-grid">
+    <div class="component-item">名声レーティング5タイル（Prestige Rating 5 Tile）<span class="qty">×6</span></div>
+    <div class="component-item">低VP価値モニュメントタイル（Low VP Value Monument）<span class="qty">×4</span></div>
+    <div class="component-item">新ユニバーサルタイル（New Universal Tile）<span class="qty">×5</span></div>
+    <div class="component-item">Upstairs, Downstairs 専用タイル<span class="qty">×3</span></div>
+    <div class="component-item">STARTタイル<span class="qty">×10</span>（5〜6人用、基本と互換）</div>
+  </div>
+
+  <div class="note">
+    <strong>低VP価値モニュメントについて:</strong> 4枚のモニュメントタイルはVP値が低く（タイル整理番号の下に「U」識別子があります）、基本ゲームのモニュメントを任意で置き換えられます。<em>Tableau Obsession</em> でのプレイ時は必ずこれらを使用します。
+  </div>
+
+  <h2>チット・コイン</h2>
+  <div class="components-grid">
+    <div class="component-item">評判カウンター（Reputation Counter）<span class="qty">×14</span>（4個は9/10用）</div>
+    <div class="component-item">評判マーカー（Reputation Marker）<span class="qty">×2</span></div>
+    <div class="component-item">新チット（New Chit）<span class="qty">×14</span>（各家族のクレスト×2）</div>
+    <div class="component-item">VPカード（VP Card）<span class="qty">×30</span></div>
+    <div class="component-item">テーマカード（Theme Card）<span class="qty">×10</span></div>
+  </div>
+
+  <h2>使用人ミープル（新規）<span class="new-tag">新規</span></h2>
+  <div class="components-grid">
+    <div class="component-item">基本使用人（Basic Servant）<span class="qty">×14</span>（執事×2、家政婦長×2、従僕×4、侍女×3、従者×4）</div>
+    <div class="component-item">料理人（Cook）<span class="qty">×6</span>（短い橙色ミープル）</div>
+    <div class="component-item">ホールボーイ（Hall Boy）<span class="qty">×5</span>（短い水色ミープル）</div>
+    <div class="component-item">頭家政婦（Head Housemaid）<span class="qty">×3</span>（短い桃色ミープル）</div>
+    <div class="component-item">便利屋（Useful Man）<span class="qty">×5</span>（短い茶色ミープル）</div>
+  </div>
+
+  <h2>カード</h2>
+  <div class="components-grid">
+    <div class="component-item">Upstairs, Downstairs 上流階級カード<span class="qty">×37</span>（「U」識別子付き）</div>
+    <div class="component-item">ハワード家カード（Howard Family Card）<span class="qty">×4</span></div>
+    <div class="component-item">Upstairs, Downstairs 目標カード<span class="qty">×13</span></div>
+    <div class="component-item">プロモーション上流階級カード（Promotional Gentry）<span class="qty">×19</span></div>
+    <div class="component-item">マイルストーン（Milestone）<span class="qty">×10</span></div>
+    <div class="component-item">ソロカード（Solo Card）<span class="qty">各種</span></div>
+    <div class="component-item">プレイヤーエイド（Player Aid）<span class="qty">×12</span></div>
+  </div>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-04.png" alt="便利なボックスコンポーネント。ビジネスルームタイルや西テラスタイル、ソロカードなど">
+    <figcaption>便利なボックスコンポーネント（原書 p.4）</figcaption>
+  </figure>
+
+  <h2>追加コンポーネント（Useful Box）</h2>
+  <div class="components-grid">
+    <div class="component-item">商務室改築タイル（Business Room Improvement Tile）<span class="qty">×2</span></div>
+    <div class="component-item">代替西テラス改築タイル（Alternative West Terrace）<span class="qty">×2</span></div>
+    <div class="component-item">上流階級カード（Gentry Card）<span class="qty">各種</span></div>
+  </div>
+
+  <h3>商務室（Business Room）について</h3>
+  <p>
+    商務室は「必需品（ESSENTIALS）」タイルで、名声レーティング0のSTARTタイルです。商務室のフロント面（前面）には名声 –£100 の修飾子があり、£200を受け取って£300を銀行に返すことができます（純利益£200）。このタイルはプレイヤーに追加の資金弾力性を与えます。
+  </p>
+  <ul>
+    <li><strong>商務室（前面）:</strong> ステップ2でこのタイルを使う場合、プレイヤーは評判が下がらず£200を支払います（活動の代わりに）。タイルを表向きにして£300を取ります。</li>
+    <li><strong>商務室（裏面）:</strong> このタイルが裏向きになった後、以下の2択があります。①£200を取って銀行に£100を払い戻す（改築の「収益増長」）、②タイルを表向きにして£300を取ります。</li>
+  </ul>
+
+  <div class="note">
+    <strong>統合詳細:</strong> 商務室タイルは Obsession の基本ゲームとの統合のための初期市場個体群向けです（名声レーティングの初期個体群見直し参照）。
+  </div>
+
+  <h3>代替西テラス（Alternative West Terrace）について</h3>
+  <p>
+    代替西テラスタイルは同じ活動でも2通りの使い方ができるユニークな2枚のタイルです。2つの異なる「名声（PRESTIGE）」改築タイルがあります——タイルの組み合わせにより、どちらかを選択してゲームに使用します。選ばなかった方のタイルは箱に戻します。
+  </p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- 基本ゲームへのルール変更点                                     -->
+<!-- ============================================================ -->
+<section id="rule-changes">
+  <h1>基本ゲームへのルール変更点</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-05.png" alt="基本ゲームからの変更点。先手マーカー、目標カード、使用人の食堂">
+    <figcaption>ルール変更点（原書 p.5）</figcaption>
+  </figure>
+
+  <h2>① 先手プレイヤーマーカー（1st Player Marker）</h2>
+  <div class="critical">
+    <strong>新ルール:</strong> 先手プレイヤーのポーンは<strong>反時計回り</strong>に回転します。
+  </div>
+  <p>
+    <strong>変更理由:</strong> ダウンタイムを削減し（5人プレイでは最大8ターン先手が遅れることがあった）、先手の戦術的優位を均衡させるためです。
+  </p>
+  <p>
+    <strong>ルール詳細:</strong>
+  </p>
+  <ul>
+    <li>先手プレイヤーをランダムに決めます。</li>
+    <li>セットアップ: 先手プレイヤーの<strong>左隣り</strong>から時計回りに家族ボードを選びます。</li>
+    <li>ゲーム中: どのラウンドでも、手番順は時計回りのまま変わりません。</li>
+    <li>シーズンの末（求婚イベント）: 先手ポーンは<strong>反時計回り</strong>に移動します（右隣のプレイヤーへ）。</li>
+  </ul>
+
+  <h2>② 目標カード（Objective Cards）</h2>
+  <div class="critical">
+    <strong>新ルール:</strong> プレイヤーはゲーム中に目標カードを評価します。
+  </div>
+  <p>
+    <strong>変更理由:</strong> 目標カードの要件が変動するため（簡単に勝利点を稼げるものや、達成困難なタイルを要求するものがある）、以前のルールでは評価が遅すぎました。
+  </p>
+  <p>
+    <strong>ルール詳細:</strong>
+  </p>
+  <ul>
+    <li>標準ゲームではプレイヤーは5枚の目標カードを持ちますが、拡張ゲームでは8枚持ちます。</li>
+    <li>目標カードのOC要件（目標カード）は変動します——一部は勝利点を簡単に稼げ、他は達成困難な特定タイルを必要とします。OC要件が低い場合、達成目標を4枚保持して得点します（価値の低いものは捨てます）。</li>
+    <li>ラウンドトラック: OCドローラウンドでは2枚引きます（1枚保持）。</li>
+  </ul>
+
+  <h2>③ 使用人の食堂（Servants' Hall）</h2>
+  <div class="critical">
+    <strong>新ルール:</strong> プレイヤーは評判を「盗む」ために使用人を<strong>消費しなければなりません</strong>。
+  </div>
+  <p>
+    <strong>変更理由:</strong> 基本ゲームでは使用人の食堂が自動的に評判を供給しすぎていたため、修正されました。
+  </p>
+  <p>
+    <strong>ルール詳細:</strong>
+  </p>
+  <ul>
+    <li><strong>ゲーム中のターン時（手番のステップ2）:</strong> プレイヤーは使用可能な任意の使用人（執事を含む）を選んで使用人の食堂タイルに置きます。これにより、相手の評判を1段階下げ、自分の評判を1段階上げます。</li>
+    <li>ターンの終わり（プレイの順序ステップ8）: ゴシップした使用人は待機サービスに置かれます。</li>
+    <li>使用人の食堂は求婚ラウンドに使用できません。</li>
+  </ul>
+  <p>ルール注意事項:</p>
+  <ul>
+    <li>執事を含む任意の使用人を使用できます。</li>
+    <li>使用人を物理的にタイルに配置します（ステップ2の開始前）。</li>
+    <li>使用人はゴシップによる恩恵を得られません（評判を上げるのみ）。</li>
+    <li>使用人の食堂は求婚ラウンドには使用できません。</li>
+  </ul>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- 補助サービス                                                   -->
+<!-- ============================================================ -->
+<section id="supplemental-service">
+  <h1>新メカニズム：補助サービス（Supplemental Service）</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-06.png" alt="補助サービスの概念説明。必須サービスと補助サービスの違い">
+    <figcaption>補助サービスの概念（原書 p.6）</figcaption>
+  </figure>
+
+  <h2>補助サービスとは</h2>
+  <p>
+    <em>Upstairs, Downstairs</em> 拡張でプレイする前に、新しい使用人が導入する新たなゲームコンセプトを理解することが重要です。基本ゲームでは、すべての使用人の配置は「必須（Mandatory）」で、改築タイルまたは上流階級カードのアイコンによって要求されます。
+  </p>
+  <p>
+    <em>Upstairs, Downstairs</em> 拡張では、<strong>使用人を任意で追加する「補助サービス（Supplemental Service）」</strong>という概念を導入します。これは改築タイルのアイコンによって要求されるものではなく、恩恵を強化したり変更したりするために任意で行われるものです。
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>必須サービス（Mandatory Service）</th>
+        <th>補助サービス（Supplemental Service）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>導入</strong></td>
+        <td>基本ゲーム</td>
+        <td>Upstairs, Downstairs 拡張</td>
+      </tr>
+      <tr>
+        <td><strong>要求元</strong></td>
+        <td>改築タイルや上流階級カードのアイコン</td>
+        <td>なし（任意）</td>
+      </tr>
+      <tr>
+        <td><strong>配置</strong></td>
+        <td>アイコンに一致する使用人</td>
+        <td>使用人を掴んでプレイヤーボードに置く</td>
+      </tr>
+      <tr>
+        <td><strong>効果</strong></td>
+        <td>活動を有効にする</td>
+        <td>恩恵を強化・変更する</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="critical">
+    <strong>重要:</strong> 特に注記がない限り、Upstairs, Downstairs の使用人は「必須サービス」と「補助サービス」の両方として機能します。執事（Butler）を使用人の食堂タイルに配置して特殊アクションを行う場合、執事は補助サービスではありません——ただし、プレイヤーが執事を持っていない場合は執事のカードを使えません。
+  </div>
+
+  <h3>補助サービスの使用例</h3>
+  <p>
+    右上の図では、料理人（Cook）が必須サービスとして使用されており、1人の一般ゲスト（Casual Guest）と1人の名声ゲスト（Prestige Guest）を招待できます（通常は招待できないレベル3の侯爵夫人（Lady Marquess of Tetbury）も！）。さらに、料理人は£700の恩恵と2つの恩恵「Take 2」も付与します。
+  </p>
+  <p>
+    ホールボーイ（Hall Boy, 水色）は執事（butler）に代わる行動をとり、マーケの物資を補充するために雇われます。若い使用人の訓練係として、マーキのすべての需要に応えます。ホールボーイの「£500の恩恵」は£600に変わります。
+  </p>
+  <p>
+    頭家政婦（Head Housemaid, 桃色）は音楽室のタイルの名声レーティングで示されるゲストを招待するためにあなたの活動でサービスを提供します。これにより£500の恩恵が£600になります。
+  </p>
+  <p>
+    最後に、便利屋（Useful Man, 茶色）はMusic Roomのタイルを名声1増加させて使用します。この活動に対して、プレイヤーは5人の名声ゲストを招待し、全員に対する恩恵を得ます。
+  </p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- 新しい使用人                                                   -->
+<!-- ============================================================ -->
+<section id="new-servants">
+  <h1>新しい使用人</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-07.png" alt="料理人とホールボーイの詳細説明。能力と使用方法">
+    <figcaption>料理人・ホールボーイ（原書 p.7）</figcaption>
+  </figure>
+  <figure>
+    <img src="images/upstairs_downstairs/page-08.png" alt="頭家政婦と便利屋の詳細説明。能力と使用方法">
+    <figcaption>頭家政婦・便利屋（原書 p.8）</figcaption>
+  </figure>
+
+  <div class="servant-card">
+    <div class="icon">🟠</div>
+    <div>
+      <h3>料理人（Cook）<span class="new-tag">新規</span></h3>
+      <p><strong>説明:</strong> 料理人は短い橙色のミープルで表されます。エリートゲストを招待し、家族の評判を高める役割を担います。</p>
+      <p><strong>テーマ的背景:</strong> ヴィクトリア朝において、社交の場での食事は洗練の証でした。精巧な料理、上品なテーブルセッティング、繊細な磁器と銀食器——これらなしには貴族の訪問も満足のいくものにはならず、才能ある料理人が影の立役者でした。</p>
+      <p><strong>ゲームプレイの詳細:</strong></p>
+      <ul>
+        <li>料理人をアクティビティタイルに置くことで、<strong>評判を1段階上げる</strong>（ゲスト招待の有無に関わらず）。</li>
+        <li>料理人は<strong>名声レーティングが自分の評判より1〜2高い活動を主催できる</strong>。</li>
+        <li>料理人は常に評判を恩恵として1つ生成し、「恩恵の獲得（Enjoy Favours）」ステップで受け取ります。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="servant-card">
+    <div class="icon">🔵</div>
+    <div>
+      <h3>ホールボーイ（Hall Boy）<span class="new-tag">新規</span></h3>
+      <p><strong>説明:</strong> ホールボーイは短い水色のミープルで表されます。金銭的な恩恵を強化し、上流階級カードを補充する役割を担います。</p>
+      <p><strong>テーマ的背景:</strong> 典型的なホールボーイ（またはボーイ）は若い、あるいは年齢の若い使用人で、玄関ホールの面倒を見る係でした。清掃し、訪問者を迎え、使用人の仕事を何でもこなしました。彼の採用は、家族が使用人への相当な投資をしている証でした。</p>
+      <p><strong>ゲームプレイの詳細（3通りの使い方）:</strong></p>
+      <ul>
+        <li>上流階級カードのポンド（£）恩恵を示すカードにホールボーイを置いて、恩恵を£100増やす。</li>
+        <li>ホールボーイを改築タイルに置いて（恩恵の獲得ステップ中）、恩恵に関わらず£100の恩恵を得る（ただし執事がいる場合のみ）。</li>
+        <li>ホールボーイを馬車の家（Carriage House）サービスタイルに置いて（名声レーティングが1増加しているタイル）、そのタイルに置かれた従者の恩恵に加えて追加の恩恵を得る。</li>
+      </ul>
+      <div class="note">
+        <strong>注:</strong> ホールボーイが金銭的恩恵を増やす場合、そのカードや活動でも恩恵が増えますが、執事のバトラーカードに置かれた場合は執事の特殊能力は発動しません。
+      </div>
+    </div>
+  </div>
+
+  <div class="servant-card">
+    <div class="icon">🩷</div>
+    <div>
+      <h3>頭家政婦（Head Housemaid）<span class="new-tag">新規</span></h3>
+      <p><strong>説明:</strong> 頭家政婦は短い桃色のミープルで表されます。侍女（Lady's Maid）としても機能し、エリートゲストへのスクリーニングを行います。</p>
+      <p><strong>テーマ的背景:</strong> 家政婦長（Housekeeper）の監督下で、頭家政婦は下位の家政婦たちを統括し、家事全般の管理を担いました。家主の妻に代わって来客の取り次ぎも行い、邸宅の評判を守る役割を果たしていました。</p>
+      <p><strong>ゲームプレイの詳細（2通りの使い方）:</strong></p>
+      <ul>
+        <li>頭家政婦をゲントリーカードに置いて、招待上限を1枚増やす（侍女の代わりとしてカードを使用し、上流階級カードを招待する場合に1体追加の侍女として機能する）。ただし、家政婦長がすでに侍女の代わりに使用されている場合、頭家政婦は招待上限を増やせません。</li>
+        <li>頭家政婦をステップ2（恩恵の獲得）で使用して、上流階級カードを1枚追加で引ける（「See 2, Take 1」）。頭家政婦が使用された場合、プレイヤーは上から2枚のカードを引き、1枚を選んで持ちます。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="servant-card">
+    <div class="icon">🟤</div>
+    <div>
+      <h3>便利屋（Useful Man）<span class="new-tag">新規</span></h3>
+      <p><strong>説明:</strong> 便利屋は短い茶色のミープルで表されます。村の市（Village Fair）の準備を行い、改築タイルを操作できます。</p>
+      <p><strong>テーマ的背景:</strong> 便利屋（またはユーティリティーマン）は大邸宅で雑多な作業をこなした職人肌の男性使用人でした。修繕・メンテナンス・運搬など、家の機能を保つあらゆる作業を担いました。彼の採用は収入と使用人への投資のシグナルでした。</p>
+      <p><strong>ゲームプレイの詳細（5通りの使い方）:</strong></p>
+      <ul>
+        <li>便利屋を村の市（Village Fair）ラウンドに配置して、評判を増やしながら£200の恩恵を得る（スタディタイルが反転していない場合は£300、反転している場合は£100のみ）。</li>
+        <li>便利屋を改築タイルの任意の場所に置いて（名声モニュメントを除く）、タイルの名声レーティングを1増やし（実際にはテーブル改築タイルを1枚リセットしてコストを£100下げる）、その後タイルを反転させる。</li>
+        <li>（ステップ2の開始前に）改築タイルを前向きに戻すことができる（ただし、改築タイルの名声レーティングが邸宅の現在の名声より低い場合のみ）。便利屋をタイルに置いた後、£100のコストがかかります（£0に引き下げ、残りのコストを支払います）。</li>
+        <li>任意の改築タイル（モニュメントを除く）から取り出して、建築家市場に置く（タイルは£300スペースに置かれ、そこから通常に購入できます）——残り5枚のタイルを袋から引き、通常通りに市場に配置します。</li>
+        <li><strong>ワンタイム（プレイヤーのターン中いつでも）:</strong> 便利屋を邸宅オーガナイザーから取り出して捨て札にし、建築家市場をリフレッシュします（残り5枚のタイルを引き、通常通り配置します）——このリフレッシュは評判コストなしに行われます。</li>
+      </ul>
+      <div class="note">
+        <strong>注:</strong> 便利屋を用いる場合、邸宅オーガナイザー内に置くと（ステップ2でアクティブになり）ゲーム全体で繰り返し使用できます。改築タイルに置いた後でも建築家市場のリフレッシュに使えます。
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- 雇用ルール                                                     -->
+<!-- ============================================================ -->
+<section id="hiring-rule">
+  <h1>雇用ルールとパス時の雇用</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-09.png" alt="パス時の雇用ルール、使用人の制限事項">
+    <figcaption>雇用ルール（原書 p.9）</figcaption>
+  </figure>
+
+  <div class="note">
+    <strong>注:</strong> この雇用・パスルールは <em>Upstairs, Downstairs</em> 拡張を使用する場合に必要です。基本ゲームのみの場合は任意です。
+  </div>
+
+  <h2>パス時に使用人を雇用できる新ルール</h2>
+  <div class="critical">
+    <strong>新ルール:</strong> プレイヤーはパス（Pass）時に使用人を雇用できます（標準ターンとパスが同一ターンに行われます）。
+  </div>
+  <p>
+    <strong>変更理由:</strong> Upstairs, Downstairs 拡張では、従僕・侍女・従者がそれほど重要でなくなります。これらの使用人がより重要な機能を持つ新使用人の追加により、単に使用人を雇用するためだけにパスする必要性が減ります。
+  </p>
+
+  <h3>パスターンの詳細</h3>
+  <ol class="steps">
+    <li>
+      <span class="step-num">予備</span>
+      <div class="step-body">
+        <strong>予備ステップ:</strong> ルールブックのステップ1で示されたように、プレイヤーはゲントリーデッキを補充し（評判を下げてデッキを補充）、ラウンドトラックを確認（ステップ2）し、モニュメントに対するOCの引き直しを行い（該当する場合）、必要に応じて使用人の食堂を使います。
+      </div>
+    </li>
+    <li>
+      <span class="step-num">新</span>
+      <div class="step-body">
+        <strong>新しい雇用選択肢:</strong> 元のゲームでは、パスにより2つの選択肢（£200を受け取るか、建築家市場のタイルを購入するか）がありました。今では3つ目の選択肢として<strong>使用人を雇用する</strong>ことができます。
+      </div>
+    </li>
+  </ol>
+
+  <h3>雇用アクションの詳細</h3>
+  <p>
+    雇用アクションを使用する場合：
+  </p>
+  <ul>
+    <li>執事（Butler）のサービスは必須です（執事の部屋タイルが必要）。</li>
+    <li>2人の使用人を共有ボードの「雇用可能（Servants for Hire）」エリアから選んで雇用できます。</li>
+    <li>雇用した使用人はすぐに「使用可能（Available Service）」に配置されます。</li>
+  </ul>
+
+  <h2>使用人の制限事項（Servant Limitations）</h2>
+
+  <div class="critical">
+    <strong>重要なルール:</strong> プレイヤーは複数の従僕・侍女・従者（モニュメントは除く）のみを雇用できます。料理人・ホールボーイ・頭家政婦・便利屋などの Upstairs, Downstairs 新使用人は複数雇用できません。
+  </div>
+
+  <ul>
+    <li><strong>雇用制限:</strong> 雇用アクションを使用する場合、2体の使用人のうち従僕・侍女・従者のみ（Upstairs, Downstairs 使用人以外）が2体雇用の対象です。</li>
+    <li><strong>招待制限:</strong> 名声レーティングが自分の評判より高い場合、招待できないゲストが存在します。執事がいない場合は特殊アクションを使えません（使用人の食堂がない限り）。</li>
+    <li><strong>副執事の制限:</strong> 副執事は従者・従僕・執事の代わりにはなれますが、Upstairs, Downstairs の新使用人の代わりにはなれません。</li>
+    <li><strong>料理人のリクルート制限:</strong> 料理人は料理人のみが持つ特殊能力（料理人の食堂など）からのみ雇用できます。</li>
+  </ul>
+
+  <h2>パスを使わずに新ルールを使う（オプション）</h2>
+  <p>
+    拡張を使う際、基本ゲームのプレイヤーは新ルールに慣れるまで元のパスルールを使い続けて構いません。プレイヤーは£200を受け取るか市場タイルを購入するかのどちらかを選べます。
+  </p>
+  <p>
+    ただし、新しいルールに切り替えた場合、パスはより戦略的で有益になります。特に序盤でパスして使用人を雇用するかどうかの判断——および、デッキを補充するかどうかの判断——は、ゲームの勝敗を左右する重要な選択です。
+  </p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- セットアップ                                                   -->
+<!-- ============================================================ -->
+<section id="setup-ud">
+  <h1>セットアップ（使用人ドラフト含む）</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-10.png" alt="使用人ドラフトを含むセットアップ詳細">
+    <figcaption>ドラフト付きセットアップ（原書 p.10）</figcaption>
+  </figure>
+
+  <div class="critical">
+    <strong>注意:</strong> プレイヤーはそれぞれ料理人・ホールボーイ・頭家政婦・便利屋を1体ずつ（計4体）持てます。
+  </div>
+
+  <h2>プレイヤーエリアのセットアップ（ドラフトあり）</h2>
+
+  <p>
+    <em>Upstairs, Downstairs</em> 拡張のプレイヤーエリアセットアップは、Obsession ルールブックのp.3の基本セットアップと同様ですが、「使用人ドラフト」が追加されます。
+  </p>
+  <p>
+    ゲーム開始時の使用人ドラフト方法:
+  </p>
+  <ol>
+    <li>「短い」使用人（料理人・ホールボーイ・頭家政婦・便利屋）を各1体ずつ取り出して、ランダムに4体を並べます。</li>
+    <li>先手プレイヤー（1stプレイヤー）から始めて、各プレイヤーが1体を選びます。</li>
+    <li>次に2番目のプレイヤーが選び、以降順に選びます。</li>
+    <li>2番目のラウンドでは、最後のプレイヤーから逆順で選びます（スネークドラフト方式）。</li>
+  </ol>
+  <p>
+    こうして、各プレイヤーは1体の新使用人を使用可能な状態からスタートします。ドラフトされなかった使用人は供給（Servants for Hire）エリアに戻します。
+  </p>
+
+  <div class="family-bonus">
+    <strong>ハワード家ボーナス:</strong> ハワード家プレイヤーボードを選んだプレイヤーは、ドラフトで料理人を選んだ場合、2番目の使用人を選ぶ権利はありません。ハワード家のプレイヤーボードには最初から料理人があるため、自動的に料理人+α（ドラフト追加分）となります——ただし、選ぶ権利は通常通りあります。
+  </div>
+
+  <h2>中央プレイエリアのセットアップ</h2>
+  <p>
+    Obsession ルールブックのp.4の手順に従いますが、以下の変更があります:
+  </p>
+  <ul>
+    <li>ステップ1：ドラフト後に残りの使用人を共有ボードの「雇用可能」エリアに配置します（副執事×2、従者×10、従僕×4、侍女×3、頭家政婦×2、便利屋×4、料理人×5、ホールボーイ×4）。</li>
+    <li>ステップ6：目標カードの引き直しについては、<em>Upstairs, Downstairs</em> 拡張の目標カードを使用します。</li>
+    <li>ステップ7以降はObsession ルールブックに従います。</li>
+  </ul>
+  <p><strong>以上でUpstairs, Downstairs 拡張のセットアップは完了です。</strong></p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- 5〜6人プレイ                                                   -->
+<!-- ============================================================ -->
+<section id="5-6-player">
+  <h1>5〜6人プレイのルール</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-11.png" alt="5人・6人プレイのルール。プレイヤーボード、ゲスト、使用人の変更">
+    <figcaption>5〜6人プレイのルール（原書 p.11）</figcaption>
+  </figure>
+
+  <h2>プレイヤーボードとオーガナイザー</h2>
+  <p>
+    利用可能なプレイヤーボードは4種類（Obsession 基本）に加え、ハワード家（Upstairs, Downstairs）とウェセックス家（Wessex拡張、別売）があります。なお、Obsessionには別のセパレートオーガナイザーがあります: ハワード家またはウェセックス家用（それぞれ別の拡張に1つずつ）。6人プレイではどちらかを使用します。
+  </p>
+
+  <div class="note">
+    <strong>重要:</strong> 6人プレイでは、<strong>必ず統合オーガナイザーを使用してください</strong>（右の図参照）——これは5家族分の5つのタイルスロットを持つ特殊なオーガナイザーです。
+  </div>
+
+  <h2>ゲスト・使用人・コンポーネント</h2>
+  <ul>
+    <li><strong>ゲスト:</strong> Upstairs, Downstairs の33枚のゲストカードを追加して、5〜6人プレイに十分なゲストを確保してください。<strong>重要ルール:</strong> プレイ中はスクリーニングが必要です（条件外のゲストが来た場合、スクリーニングアウトしてください。ゲストが用意できない場合は5人招待はできません）。</li>
+    <li><strong>使用人:</strong> 5〜6人プレイの開始使用人も統合セットアップに従います。</li>
+    <li><strong>目標カード:</strong> 目標カードはゲームの最後に捨てられます（各シーズンの末）。各プレイヤーは各シーズンの末に目標カードを1枚捨て、3枚保持します。</li>
+  </ul>
+
+  <h2>6人個人競争プレイの調整（ルール）</h2>
+  <p>
+    6人プレイの場合、特定の調整が必要です:
+  </p>
+  <ul>
+    <li><strong>プレイヤーエリアのセットアップ:</strong> ステップ1〜2はルールブックのとおり。6人プレイでは先手プレイヤーのポーン以外に補助ポーンがあります——最後のプレイヤーは補助を持たず、1st player gets no compensation (a tactical advantage!)。それ以外はObsessionのルールブックのとおり。</li>
+    <li><strong>中央エリアのセットアップ:</strong> 2〜4人用のセットアップに従います（Obsession ルールブックp.4〜5）。以下の変更があります: 副執事×3、従者×10、従僕×5の侍女×4。</li>
+    <li><strong>ステップ3〜10:</strong> Obsession ルールブックに従います。</li>
+  </ul>
+
+  <h3>5〜6人プレイの招待制限（Guest Limitation Rule）</h3>
+  <p>
+    5〜6人プレイでは、非常に高い名声レーティングの活動を開催する際（例えば名声レーティング5以上）、招待できるゲストの枚数に制限があります——プレイヤーは名声ゲストをゲームから除外できます（一般ゲストのみ除外可能）。名声ゲストがゲームにいなくなると、プレイヤーは名声ゲストの招待数をゲーム内に残った枚数に変更します。この制限はゲスト招待上限に加算されます——除外した名声ゲストの数だけVPが引かれます。
+  </p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- チームプレイ                                                   -->
+<!-- ============================================================ -->
+<section id="team-play">
+  <h1>チームプレイ（競争・協力）</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-12.png" alt="チームプレイのルール（4または6人）。協力アクションと得点計算">
+    <figcaption>競争チームプレイ（原書 p.12）</figcaption>
+  </figure>
+
+  <h2>競争チームプレイ（4人または6人）</h2>
+  <p>
+    公式の6人競争プレイは、3チーム×2人（チームを同じグラフィックで識別）を使用するゲームモードです。先手プレイヤーは各チームに1人ずつ存在し、チームメンバーは向かい合って座ります。
+  </p>
+
+  <h3>セットアップ</h3>
+  <p>
+    Upstairs, Downstairs のセットアップ手順（p.10）と同様ですが、以下の変更があります：
+  </p>
+  <ul>
+    <li>先手プレイヤーのポーンを各チームに1つ割り当てます。</li>
+    <li>チームのメンバーは隣接する家族ボードを選びます。</li>
+  </ul>
+
+  <h3>協力アクション（Cooperative Actions）</h3>
+
+  <h4>お金（Money）</h4>
+  <p>
+    チームメンバーはお互いに£100か£200を渡すよう依頼できます（または拒否できます——チームメンバーは自分の計画があります）。依頼された使用人が「使用可能」にいる場合、その使用人は依頼プレイヤーに渡すことができます。
+  </p>
+
+  <h4>使用人（Servants）</h4>
+  <p>
+    アクティブプレイヤーは自分のチームメンバーから使用人を借りることができます。すべての使用人が「使用可能（Available Service）」の状態にある場合に使用できます。チームメンバーは特殊アクション（SA）を自分でもチームメンバーのために使えます。活動が完了すると、使用人は借りた使用人の持ち主（チームメンバー）の「待機（Expended Service）」に戻されます。
+  </p>
+
+  <h4>ゲスト（Guests）</h4>
+  <p>
+    アクティブプレイヤーはチームメンバーを活動に招待できます（チームメンバーが「アクティブハンド」にいる場合のみ）。チームメンバーが活動に参加できる場合: アクティブプレイヤーはチームメンバーも招待できます（チームメンバーのカードがそのゲストの条件を満たす場合）。
+  </p>
+  <ul>
+    <li>家族カードはチームメンバーの恩恵を活動に参加させます。</li>
+    <li>チームメンバーは共に手札に何かを加えることができます（初期ゲストカードも含む）。</li>
+    <li>アドミラー・ボーナス（Admirer Bonus）: 評判はアクティブプレイヤーまたはチームメンバーのどちらかに入れます。</li>
+  </ul>
+
+  <h4>ゲームの終了（End Game Scoring）</h4>
+  <p>
+    スコアシートの各カテゴリは以下のように集計されます:
+  </p>
+  <ul>
+    <li>改築タイル VP: 平均</li>
+    <li>上流階級カード VP: 平均</li>
+    <li>目標カード VP: <strong>Team Score 3（チームスコア上位3枚合計）</strong></li>
+    <li>評判 VP: 平均</li>
+    <li>サービス VP: 平均</li>
+    <li>財富 VP: 平均</li>
+    <li>求婚活動 VP Card: 平均</li>
+  </ul>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- ソロ・エステートチャレンジ                                     -->
+<!-- ============================================================ -->
+<section id="solo-estate">
+  <h1>ソロ・エステートチャレンジ（Solo Estate Challenge）</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-13.png" alt="ソロ・エステートチャレンジのセットアップ">
+    <figcaption>ソロ・エステートチャレンジ・セットアップ（原書 p.13）</figcaption>
+  </figure>
+  <figure>
+    <img src="images/upstairs_downstairs/page-14.png" alt="ソロ・エステートチャレンジのゲームプレイと得点計算">
+    <figcaption>ソロ・エステートチャレンジ・ゲームプレイと得点（原書 p.14）</figcaption>
+  </figure>
+
+  <p>
+    従来の Obsession ソリテアは「段階的に難しくなる対戦相手との求婚競争」でしたが、<strong>ソロ・エステートチャレンジ（SEC）</strong>は求婚をなくし、<strong>邸宅の発展のみを勝利への道</strong>とします。
+  </p>
+
+  <h2>セットアップ</h2>
+
+  <h3>固有のプレイヤーエリアのセットアップ</h3>
+  <ul>
+    <li>ソリテアプレイヤー（SP）は常に先手プレイヤーです。</li>
+    <li>SPは目標カードを持ちません。</li>
+    <li>SPはドラフトで1体の使用人を引き、これを使用人として使います（Cook はハワード家ボード以外では使いません）。</li>
+  </ul>
+
+  <h3>ゲーム長（標準・拡張）</h3>
+  <p>
+    ソロ・エステートチャレンジの標準・拡張ゲームは Obsession の標準・拡張ゲームと同じ評判ホイールのカウンター（RWC）を使います。
+  </p>
+  <ul>
+    <li>標準ゲーム（ラウンド15）: ターゲットスコア 132</li>
+    <li>拡張ゲーム（ラウンド20）: ターゲットスコア 188</li>
+  </ul>
+
+  <h3>固有の中央エリアのセットアップ</h3>
+  <ul>
+    <li>ステップ2: すべてのグループ目標カードを目標カードデッキから取り出し、ゲームに使用できるようにします（目標カードはMain LibraryとVP Cardsで入手可）。</li>
+    <li>ステップ6: 初期個体群には<em>Upstairs, Downstairs</em> 拡張のスタートタイルを含めます。以下の変更で変更: スイートタイルを含めますが、ハイブリッドタイルは含めません。</li>
+    <li>ステップ7: タブロー用ラウンドトラックを使用します（5番目にあるSECが使用したもの）。そのラウンドトラックの白いポーンをSTARTスペースに置きます。VPカードと目標カードの初期配置については、タブロー用ラウンドトラックに従います（ゲームの残り時間に依存します）。チャールズとエリザベス・フェアチャイルドのカードは使用しません。</li>
+    <li>ステップ8: Obsession のルールブックに従います。</li>
+  </ul>
+
+  <h2>ゲームプレイ</h2>
+  <p>
+    各ソリテアプレイヤーのターンは、プレイヤーボードの各家族について記したプレイの順序（Order of Play）に従います。ゲームは以下の2つの条件が満たされたときに終了します:
+  </p>
+  <ol>
+    <li>SPが最大評判に達する。</li>
+    <li>SPの邸宅オーガナイザー（Country Estate Organiser）のタイルが完成（揃う）する。</li>
+  </ol>
+  <p>
+    これらの条件が満たされると、ゲームは終了し、得点が計算されます。
+  </p>
+
+  <h3>ステップ7: プレイの順序「建築家市場での買い物（Buy from Market）」</h3>
+  <p>
+    SPは市場の優位を持ちます——すべてのタイルのコストが£500以下（標準ゲーム）かつ対象のタイルの整理番号（TSN）を把握した状態でプレイを行い、市場の優先タイルを先手として選びます。<em>注: SPが重複タイルを引いた場合は市場から除外されます（通常のプレイとは異なります）。これはゲームメカニズムによる制限です。</em>
+  </p>
+  <p>
+    SPはゲーム中いつでも市場からスカベンジを行います（タイルを市場から除去します）。スカベンジできるタイルがない場合は何も起きません。
+  </p>
+
+  <h2>AIスカベンジング（AI Scavenging）</h2>
+  <p>
+    ステップ7のあとに、SPは市場からスカベンジタイルを探します（AIが市場の最も価値の高いタイルを取る方法）。ダイスを振り、タイル整理番号（TSN）の最上位タイルが取られます。市場にスカベンジ対象のタイルがない場合は何も起きません。
+  </p>
+
+  <h2>得点計算（End Game Scoring）</h2>
+  <p>
+    SPはObsessionのスコアシートを使って得点を計算し、ゲーム長に応じたターゲットスコアと比較します。<strong>ターゲットスコアを超えた場合、SPは勝利です！</strong>
+  </p>
+
+  <h3>重要ルール:</h3>
+  <p>AIは以下の場合にスカベンジを行いません:</p>
+  <ul>
+    <li>スタックからSPがタイルを完成させる前に同じタイルが2枚揃った場合</li>
+    <li>たとえば、SPが名声レーティング4の市場を持っていて、AIが同じ名声4のタイルを取ることができない場合</li>
+  </ul>
+
+  <h3>ラウンドトラック（SECモード）</h3>
+  <p>
+    ラウンドトラックの数字はVPに加減算されます: 例えばSPがラウンド14（黄色でXが付いています）で終了した場合、15VPから引かれます。以降も同様で、数字が大きいほど大きなペナルティです。ラウンド17で終了した場合、5–10–15のパターンで3回7VPが追加されます。
+  </p>
+
+  <h3>ターゲットスコアのバリアント</h3>
+  <p>
+    上級難易度向けに、スカベンジされたモニュメントのVPをターゲットスコアに追加します（AIスカベンジング参照）。
+  </p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- タブロー・オブセッション                                       -->
+<!-- ============================================================ -->
+<section id="tableau">
+  <h1>タブロー・オブセッション（Tableau Obsession）</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-15.png" alt="タブロー・オブセッションとマイルストーンのルール">
+    <figcaption>タブロー・オブセッション（原書 p.15）</figcaption>
+  </figure>
+
+  <p>
+    <em>Tableau Obsession</em>（「タブロー・デュエル（Duel）」とも呼ばれます）は Obsession の究極のゲームモードです。ランダム性をほぼ完全に排除し、ヴィクトリア朝の社会活動を代表するゲームとなっています。
+  </p>
+  <ul>
+    <li>タブロー用ラウンドトラックを使用します（2）</li>
+    <li>求婚活動（Courtship）はありません（3）</li>
+    <li>各プレイヤーのターンが終わると<strong>即座に</strong>終了します（さらなるターンはありません）</li>
+  </ul>
+  <p>
+    タブロー・オブセッションの得点計算は以下のみです:
+  </p>
+  <ul>
+    <li>改築タイルVP</li>
+    <li>プレイヤー評判VP</li>
+    <li>未使用ゲスト（Negative VP）</li>
+    <li>VPカードと目標カード（Main Libraryで入手）</li>
+  </ul>
+
+  <h2>セットアップ</h2>
+
+  <h3>固有のプレイヤーエリアのセットアップ</h3>
+  <ul>
+    <li>ステップ2: 家族ボードを選ぶ際、先手プレイヤーの<strong>左側</strong>のプレイヤーから時計回りに選びます。</li>
+    <li>ステップ3: プレイヤーエリアのセットアップ時に2人の使用人が選ばれます: ①使用人ドラフト（p.10参照）、②もう1体の使用人は初期使用人です（ステップ5で説明した通常の5体）。最初に、2体の9/10評判ホイールカウンターを使用して、追加の評判段階8と9をトラックします。</li>
+    <li>ステップ10: 目標カードは使用しません——ただし、よりダイナミックな経験を求める場合はステップ3から初期的に9つの目標カードを保持できます（拡張プレイでは）。</li>
+    <li>マイルストーン: マイルストーンは任意で追加できます（マイルストーンについては後述）。</li>
+  </ul>
+
+  <h3>固有の中央エリアのセットアップ</h3>
+  <ul>
+    <li>ステップ2: すべてのグループ（目標カード）をゲームから取り出して、ゲームで使用します（Main LibraryとVPカードで入手）。</li>
+    <li>ステップ7: タブロー用ラウンドトラックを使用します。VPカードとラウンドトラックの詳細はタブロー用ラウンドトラックの説明に従います。</li>
+    <li>ステップ8: 通常のルールに従いますが、Obsession の基本ゲームよりも前のセットアップでは、市場をさらに選別します: スタートタイルが市場に含まれないことを確認してください。</li>
+  </ul>
+
+  <h2>固有のゲームルール（Unique Master Rules）</h2>
+  <ul>
+    <li>クイーン・ヴィクトリアカード: タブロー・オブセッションのプレイ時は、p.25のObsession Glossaryに記載された手順（クイーン・ヴィクトリアのユニークルール）で使用します。</li>
+    <li>ラウンド5でのグランドボール: ラウンド5の先手プレイヤーのターンが始まる前に、グランドボール（Grand Ball）が開催されます。先手プレイヤーから始めて各プレイヤーは3枚の名声ゲストを引き（デッキから1枚取り）、手札に加えます。各プレイヤーは望む目標カードの残りを捨て、カードを保持します。ラウンドが普通に続きます。</li>
+    <li>リソースを使い切る: ゲームの最後に評判目標を達成するために、プレイヤーはVPを収集して活発なリフレッシュで使い切ります（特に建築家の休日を利用して）。1回のリフレッシュを使い切ります。ゲームの最後まで取り組みます。</li>
+  </ul>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- マイルストーン                                                 -->
+<!-- ============================================================ -->
+<section id="milestones">
+  <h1>マイルストーン（Milestones）</h1>
+
+  <p>
+    マイルストーンは<strong>公開目標（Public Objectives）</strong>で、すべてのプレイヤーに公開されています。プライベートな目標カードとは異なり、複数のプレイヤーが同じマイルストーンを達成することはできません（早い者勝ち）。
+  </p>
+  <p>全部で10枚のマイルストーンがあります（上位10枚のみ——下位10枚は基本ゲームでは使用不可）。</p>
+
+  <h2>セットアップ</h2>
+  <ol>
+    <li>プレイヤーエリアのセットアップを開始する前に、2枚のマイルストーンをゲームに追加します（任意で使用します）。または設定ごとに選択します（2〜3枚のマイルストーンを1枚ずつ）。</li>
+    <li>それ以外の場合は各プレイヤーが好みのマイルストーンを選んでゲームで使用します。</li>
+  </ol>
+
+  <h2>ゲームプレイ</h2>
+  <ul>
+    <li>プレイヤーのターン中<strong>いつでも</strong>、マイルストーンの条件を満たした場合、プレイヤーは自分のボードのエリアにマイルストーンを置きます。</li>
+    <li>各プレイヤーが取れるマイルストーンは1枚のみ（1stまたは2ndポジションのみ）。</li>
+    <li>プレイヤーはマイルストーンの条件を満たした後にのみ請求できます（ゲームの要件を満たす）。</li>
+    <li>マイルストーンは（可能であれば）失うことができません——ただし、条件が満たせなくなった場合は返還します（例えば、タイルが捨てられた場合）。</li>
+  </ul>
+
+  <div class="note">
+    <strong>注:</strong> マイルストーンは Obsession のルールブック p.13のマイルストーンルールに記載されています。
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- 新しい改築タイル                                               -->
+<!-- ============================================================ -->
+<section id="new-tiles-ud">
+  <h1>新しい改築タイル</h1>
+
+  <figure>
+    <img src="images/upstairs_downstairs/page-16.png" alt="新しい改築タイルのルール詳細。馬車の家、ストック湖、家政婦室、改装厨房など">
+    <figcaption>新しい改築タイルのルール（原書 p.16）</figcaption>
+  </figure>
+
+  <h2>馬車の家（Carriage House）</h2>
+  <p>
+    馬車の家はプレイヤーが1人のゲストを活動に招待する機会を与える改築タイルです（名声レーティングが邸宅のものより高いゲストを含む可能性があります）。
+  </p>
+  <p><strong>ユニークルール:</strong></p>
+  <ul>
+    <li>使用可能な従者（Footman）またはホールボーイを必ず置かなければなりません。</li>
+    <li>通常のルールが適用されます（名声レーティング、対象ゲストの条件など）。</li>
+    <li>馬車の家はスイート・サービスタイルの招待のために使えません。</li>
+    <li>馬車の家を使用後は使えません（1ターンに1枚のタイルのみ）。</li>
+  </ul>
+
+  <h2>ストック湖（Stocked Lake）</h2>
+  <p>
+    ストック湖は名声レーティング4の<strong>最初のスポーツタイル</strong>です。基本ゲームの他のスポーツタイルと同様に機能します。
+  </p>
+
+  <h2>家政婦室（Housekeeper's Room）</h2>
+  <p>
+    家政婦室は家政婦長（Housekeeper）に<strong>恒久的な新能力</strong>を与えます。家政婦長はこのタイルを置くことで、活動中の必須使用人として侍女の代わりに使えます（つまり、侍女がいなくても家政婦長が侍女として機能します）。
+  </p>
+
+  <h2>改装厨房（Renovated Kitchen）</h2>
+  <p>
+    改装厨房は Cook（料理人）の使用人（または使用人食堂の使用人）によって起動されます。料理人がこのタイルを使うと、<strong>次のタイルの名声レーティングで最大の恩恵</strong>を得ます。
+  </p>
+  <p><strong>前面（Front Side）:</strong> このタイルは料理人の必須使用人のタイルで、邸宅に置かれたものです（料理人の名声レーティング補正を参照）。2人以上のゲストがいる場合（名声条件を満たす場合）、招待できます（名声レーティングの確認）。料理人を使うたびに評判を1上げます（すべての場合に）。</p>
+  <p><strong>後面（Back Side）:</strong> このタイルが反転した後は、邸宅オーガナイザーに留まり、ゲームの残りの間ずっと料理人を便利屋として使えます（料理人の便利屋能力を使用）。料理人の前向きの場合と同様に、このサービスが使われると評判を1上げます。また、料理人を通常通りに他の活動に使えます（次の段落も参照）。</p>
+  <ul>
+    <li>追加ゲストは通常の資格ルールに従う必要があります（名声レーティング、対象ゲストの条件など）。</li>
+    <li>料理人のサービスタイルは活動に1回しか使用できません。</li>
+    <li>馬車の家の招待のために料理人を使うことはできません。</li>
+    <li>この料理人のサービスタイルは活動を行った後は使用できません（1ターンに1枚のタイルのみ）。</li>
+  </ul>
+
+  <h2>バッカー開発プロモーションタイル（Backer-Developed Promotional Tiles）</h2>
+  <p>
+    2019年のKickstarter キャンペーンで2枚の勝利プロモーションタイルが選ばれました:
+  </p>
+  <ul>
+    <li><strong>教区教会（Parish Church）:</strong> 邸宅（ESTATE）改築タイルをモニュメントタイルとして使えます（アクションは不要です）。教会のフロント面は何もなし、後面は1枚の目標カードとして機能し（評判も£100も得られます）。</li>
+    <li><strong>バブリング・ブルック（Bubbling Brook）:</strong> このハイブリッドタイルは表/裏のどちらでも使えます。邸宅（ESTATE）側の恩恵は、ステップ4で任意のカードを1枚引いて手札に加えます。現在の活動のゲストは加算されませんが、参加します。後面のモニュメント側では、各ターンの開始（ステップ2）でプレイヤーは捨て札から1枚取ることができます。</li>
+  </ul>
+
+</section>
+
+</main>
+
+<footer>
+  <p>Obsession: Upstairs, Downstairs 拡張 日本語訳版 — 原著: Dan Hallagan / Kayenta Games</p>
+  <p>翻訳: Claude Code（AI翻訳） | <a href="index.html">トップページ</a> | <a href="glossary.html">用語集</a></p>
+</footer>
+
+</body>
+</html>
